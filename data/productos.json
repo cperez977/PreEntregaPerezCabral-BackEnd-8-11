@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Laptop Actualizada",
+    "description": "Descripción del nuevo producto",
+    "code": "ABC123",
+    "price": 50,
+    "status": true,
+    "stock": 100,
+    "category": "Electrónica",
+    "thumbnails": [
+      "imagen1.jpg",
+      "imagen2.jpg"
+    ],
+    "id": "1699481495885"
+  },
+  {
+    "title": "Celular",
+    "description": "Descripción del nuevo producto",
+    "code": "ABC123",
+    "price": 19.99,
+    "status": true,
+    "stock": 100,
+    "category": "Electrónica",
+    "thumbnails": [
+      "imagen1.jpg",
+      "imagen2.jpg"
+    ],
+    "id": "1699481505316"
+  },
+  {
+    "title": "PC de escitorio",
+    "description": "Descripción del nuevo producto",
+    "code": "ABC123",
+    "price": 19.99,
+    "status": true,
+    "stock": 100,
+    "category": "Electrónica",
+    "thumbnails": [
+      "imagen1.jpg",
+      "imagen2.jpg"
+    ],
+    "id": "1699481520345"
+  }
+]

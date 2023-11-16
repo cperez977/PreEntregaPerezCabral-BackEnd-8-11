@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lista de productos en tiempo real</title>
+  </head>
+  <body>
+    <h1>Lista de productos en tiempo real</h1>
+    <ul>
+      {{#each products}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
+
+    <div>
+    const form = document.querySelector('form');
+
+     form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+     const product = form.elements.product.value;
+     const action = form.elements.action.value;
+
+     socket.emit(action, product);
+     });
+
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      const socket = io();
+
+      socket.on('product created', (product) => {
+        const li = document.createElement('li');
+        li.textContent = product;
+        document.querySelector('ul').appendChild(li);
+      });
+
+      socket.on('product deleted', (product) => {
+        const lis = document.querySelectorAll('li');
+        lis.forEach((li) => {
+          if (li.textContent === product) {
+            li.remove();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
